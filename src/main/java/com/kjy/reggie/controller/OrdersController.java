@@ -100,4 +100,27 @@ public class OrdersController {
     }
 
 
+    /**
+     * 给后台显示订单信息
+     */
+    @GetMapping("/page")
+    public R<Page> page(AllPage allPage){
+        Page<Orders> ordersPage = new Page<>(allPage.getPage(), allPage.getPageSize());
+        LambdaQueryWrapper<Orders> ordersLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        ordersLambdaQueryWrapper
+                .orderByDesc(Orders::getOrderTime);
+
+        ordersService.page(ordersPage,ordersLambdaQueryWrapper);
+
+        return R.success(ordersPage);
+    }
+
+//public R<String > deliver()
+
+
+
+
+
+
+
 }

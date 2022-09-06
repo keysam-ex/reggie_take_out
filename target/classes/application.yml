@@ -10,6 +10,7 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/reggie?useSSl=true&useUnicode=true&characterEncoding=UTF-8
       username: root
       password: kjy
+
   mvc:
     hiddenmethod:
       filter:
@@ -25,4 +26,5 @@ mybatis-plus:
 
 
 reggie:
- fileuploadpath: D:\\JAVA\\JAVAEE_projects\\imgs\\
+   fileuploadpath: D:\\JAVA\\JAVAEE_projects\\imgs\\
+
